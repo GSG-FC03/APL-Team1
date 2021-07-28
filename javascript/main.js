@@ -18,7 +18,7 @@ fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
       content.setAttribute("class", "juice");
 
       const img = document.createElement('img');
-      img.setAttribute('src',`${r.strDrinkThumb})`);
+      img.setAttribute('src',`${r.strDrinkThumb}`);
 
       const h1 = document.createElement("h1");
       h1.textContent ='ID: '+ r.idDrink;
