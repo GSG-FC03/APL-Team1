@@ -1,4 +1,8 @@
+//declare variables using dom
 const drinks = document.querySelector('.drinks');
+const input = document.getElementById('search');
+const btn = document.getElementById('btnSearch');
+
 
 fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
 .then((response) => {
