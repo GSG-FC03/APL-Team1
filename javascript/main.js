@@ -1,6 +1,6 @@
 const drinks = document.querySelector('.drinks');
 
-fetch('https://www.thecocktaildb.com/api/pjson/v1/1/search.php?s=margarita')
+fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
 .then((response) => {
     if (response.status !== 200) {
       console.log(
@@ -12,7 +12,7 @@ fetch('https://www.thecocktaildb.com/api/pjson/v1/1/search.php?s=margarita')
     }
   })
   .then((data) => {
-    for (let r of data.drinks){
+    for (let r of data.drinks){ 
 
       const content = document.createElement("div");
       content.setAttribute("class", "juice");
