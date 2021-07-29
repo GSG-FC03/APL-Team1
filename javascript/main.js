@@ -3,8 +3,11 @@ const drinks = document.querySelector('.drinks');
 const input = document.getElementById('search');
 const btn = document.getElementById('btnSearch');
 
+btn.onclick= searchDrinks;
 
-fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
+function searchDrinks(e){
+e.preventDefault();
+fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${input.value}`)
 .then((response) => {
     if (response.status !== 200) {
       console.log(
@@ -54,3 +57,4 @@ fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
 
     };
   }).catch((eror)=>console.log(eror))
+}
