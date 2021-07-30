@@ -40,17 +40,19 @@ setTimeout(()=>{
   
         const alcoholic =document.createElement("h3")
         alcoholic.textContent="Alcoholic :"+r.strAlcoholic
-  
-  
-        innerDiv.addEventListener("click",function(){
+
         const p = document.createElement("p");
-        p.textContent ="Instructions :"+r.strInstructions;   
-         innerDiv.appendChild(p);
-        })
+        p.textContent ="Instructions :"+r.strInstructions;
+        p.style.display='none'; 
+        p.style.fontSize='20px';
+        
+        innerDiv.addEventListener("click",function(){  
+         p.style.display='block';
+        })              
         innerDiv.appendChild(drinkName);
         innerDiv.appendChild(h1);
      innerDiv.appendChild(alcoholic)
-  
+     innerDiv.appendChild(p)
         content.appendChild(img);
         content.appendChild(innerDiv);
         drinks.appendChild(content);
@@ -95,20 +97,23 @@ fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${input.value}`)
       const alcoholic =document.createElement("h3")
       alcoholic.textContent="Alcoholic :"+r.strAlcoholic
 
+      const p = document.createElement("p");
+      p.textContent ="Instructions :"+r.strInstructions; 
+      p.style.display='none';
+      p.style.fontSize='20px';
 
       innerDiv.addEventListener("click",function(){
-      const p = document.createElement("p");
-      p.textContent ="Instructions :"+r.strInstructions;   
-       innerDiv.appendChild(p);
+        p.style.display='block';     
       })
       innerDiv.appendChild(drinkName);
       innerDiv.appendChild(h1);
    innerDiv.appendChild(alcoholic)
-
+   innerDiv.appendChild(p);   
       content.appendChild(img);
       content.appendChild(innerDiv);
       drinks.appendChild(content);
 
     };
   }).catch((eror)=>console.log(eror))
+  input.value='';
 }
