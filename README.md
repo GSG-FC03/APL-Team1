@@ -16,5 +16,6 @@ if the drink alcoholic or not and the id for the drink
 * API
 
 # Contriburters:
--[salsabeelomar](https://github.com/salsabeelomar)
--[EmanHassouna](https://github.com/EmanHass)
+- [salsabeelomar](https://github.com/salsabeelomar)
+
+- [EmanHassouna](https://github.com/EmanHass)
