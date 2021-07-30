@@ -41,7 +41,7 @@ form{
 }
 
 #btnSearch{
-    width: 8%;
+    padding:10px;
     background: #dab0b875;
     border: none;
     border-radius: 10px;    
