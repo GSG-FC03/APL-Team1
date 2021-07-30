@@ -13,7 +13,7 @@ if the drink alcoholic or not and the id for the drink
 * HTML
 * CSS
 * JavaScript
-* API(https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita)
+* [API](https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita)
 
 # Contriburters:
 - [salsabeelomar](https://github.com/salsabeelomar)
