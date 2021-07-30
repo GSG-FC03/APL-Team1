@@ -63,9 +63,8 @@ setTimeout(()=>{
 })
 function searchDrinks(e){
 e.preventDefault();
-drinks.style.display='none';
-const sec = document.createElement('section');
-body.appendChild(sec);
+drinks.innerHTML="";
+
 fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${input.value}`)
 .then((response) => {
     if (response.status !== 200) {
@@ -114,7 +113,7 @@ fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${input.value}`)
    innerDiv.appendChild(p);   
       content.appendChild(img);
       content.appendChild(innerDiv);
-      sec.appendChild(content);
+      drinks.appendChild(content);
 
     };
   }).catch((eror)=>console.log(eror))
