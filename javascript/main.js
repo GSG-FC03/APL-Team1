@@ -2,7 +2,7 @@
 const drinks = document.querySelector('.drinks');
 const input = document.getElementById('search');
 const btn = document.getElementById('btnSearch');
-
+const body = document.querySelector('body');
 btn.onclick= searchDrinks;
 
 //Add setoutime contains a function that executes once the page is loaded
@@ -45,7 +45,7 @@ setTimeout(()=>{
         p.textContent ="Instructions :"+r.strInstructions;
         p.style.display='none'; 
         p.style.fontSize='20px';
-        
+
         innerDiv.addEventListener("click",function(){  
          p.style.display='block';
         })              
@@ -63,6 +63,9 @@ setTimeout(()=>{
 })
 function searchDrinks(e){
 e.preventDefault();
+drinks.style.display='none';
+const sec = document.createElement('section');
+body.appendChild(sec);
 fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${input.value}`)
 .then((response) => {
     if (response.status !== 200) {
@@ -111,7 +114,7 @@ fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${input.value}`)
    innerDiv.appendChild(p);   
       content.appendChild(img);
       content.appendChild(innerDiv);
-      drinks.appendChild(content);
+      sec.appendChild(content);
 
     };
   }).catch((eror)=>console.log(eror))
